@@ -300,26 +300,36 @@ img:hover{
   </div>
     </div>
   </br>
-  <p>If you are interested in learning more about the Sims 4, check out Electronic Arts'
+<p>You can check out this questionnaire </p>
+  <button class="ContactDetails"> Sims Questionnaire </button>
+  
+  <p>or If you are interested in learning more about the Sims 4, check out Electronic Arts'
     website below</p>
   <p>
     <a href="https://www.ea.com/games/the-sims/the-sims-4" target="_blank"><button class="ElectronicArtsWebsite">EA: The
         Sims 4</button>
     </a>
   </p>
-  <p>Or you can subscribe to my blog below</p>
-  <button class="ContactDetails"> Subscribe Here </button>
+  
   <p>This page was created by Keisha L
   </p>
   </div>
   <script>
     function buy() {
       let name = prompt("What is your name?");
-      let email = prompt("What is your email?");
-      alert("Thank you, " + name + " for subscribing to my blog!");
-    }
+         alert("Thank you, " + name + " for visiting my blog!");
+      let interest = prompt("Have you ever played any of the Sims franchise games before?")
+       .toLowerCase()
+       .trim();
+    ;
+      if (interest==="yes") {
+        alert("Great! Happy Simming!");
+       } else {
+          alert("No problem, you can start simming away by checking EA's website at the bottom of the page ");
+      }
+    }  
     let contactDetails = document.querySelector(".ContactDetails");
-    contactDetails.addEventListener("click", buy);
+    contactDetails.addEventListener("click", buy); 
   </script>
 
 </html>
