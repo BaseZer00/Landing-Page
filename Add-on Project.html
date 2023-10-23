@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgb(177, 173, 219) 11.2%,
+          rgb(245, 226, 226) 91.1%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        color: teal;
+      }
+      p {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        line-height: 1.5;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .Container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .theme-button {
+        font-size: 12px;
+        background: plum;
+        color: black;
+        padding: 5 8px;
+      }
+      .theme-button:hover {
+        color: white;
+        background: black;
+      }
+      .Piano1 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+      .Piano1:hover {
+        filter: contrast(50%);
+        transform: scale(1.1);
+      }
+      .Piano2 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+
+      .Piano3 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+
+      .Piano4 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+      .Piano5 {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        border-radius: 8px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.4);
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .Container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: white;
+      }
+    </style></head
+  >"
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="Container">
+      <h1>Piano</h1>
+      <h2>My new favorite hobby!</h2>
+
+      <img
+        src="https://images.unsplash.com/photo-1507334608139-c6cbaabf6621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        class="Piano1"
+      />
+
+      <div class="grid">
+        <img
+          src="https://celebrity-series.s3.amazonaws.com/files/productions/kannehmason-isata-1440x960.jpg"
+          class="Piano2"
+        />
+        <img
+          src="https://img.freepik.com/premium-photo/keyboard-music-with-vibrant-notes-keys_410516-13401.jpg?w=996"
+          class="Piano3"
+        />
+        <img
+          src="https://images.pexels.com/photos/586415/pexels-photo-586415.jpeg?cs=srgb&dl=pexels-bryan-geraldo-586415.jpg&fm=jpg"
+          class="Piano4"
+        />
+
+        <img
+          src="https://img.freepik.com/premium-photo/generative-ai-illustration-gorgeous-black-woman-with-blue-afro-hair-singing-playing-piano-studiosigner-performig_58460-15821.jpg"
+          class="Piano5"
+        />
+      </div>
+
+      <h2>What is the art of Piano?</h2>
+      <p>
+        The piano is a keyboard instrument that produces sound when pressed on
+        the keys. Most modern pianos have a row of 88 black and white keys: 52
+        white keys for the notes of the C major scale (C, D, E, F, G, A and B)
+        and 36 shorter black keys raised above the white keys and set further
+        back, for sharps and flats. This means that the piano can play 88
+        different pitches (or "notes"), spanning a range of a bit over seven
+        octaves.
+      </p>
+      <p>
+        The black keys are for the "accidentals" (F♯/G♭, G♯/A♭, A♯/B♭, C♯/D♭,
+        and D♯/E♭), which are needed to play in all twelve keys. There are two
+        main types of piano: the grand piano and the upright piano. The grand
+        piano offers better sound and more precise key control, making it the
+        preferred choice when space and budget allow. The grand piano is also
+        considered a necessity in venues hosting skilled pianists. The upright
+        piano is more commonly used due to its smaller size and lower cost.
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Piano" target="_blank"
+          >Read more on Wikipedia</a
+        >
+      </p>
+
+      <button>Contact me for Inspiration</button>
+    </div>
+    <footer>Coded by Keisha L</footer>
+  </body>
+
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+
+      if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+      } else {
+        body.classList.add("dark");
+      }
+    }
+    //  remove if statement and replace with  body.classList.toggle("dark"); for a shortcut
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+  </script>
+</html>
